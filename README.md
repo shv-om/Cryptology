@@ -2,7 +2,7 @@
 Rough Implementations of some useful and not so useful ciphers, techniques, attacks etc.
 
 
-# Question:
+# Question - modified_vigenere_cipher:
 
 Define a modified shift cipher where characters occurring at the odd positions are shifted (addition modulo 10) by applying the key character once and  the characters occurring  at the even positions are shifted by applying the key character twice. Implement (encryption and decryption) this cipher in python
 
