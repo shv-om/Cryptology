@@ -23,8 +23,9 @@ def decrypt(cipher, key):
 
 #message = input("Enter the Message: ")
 #key = input("Enter the key: ")
+
 message = str((10**16)-1)
-key = '6197'
+key = '1636'
 
 cipher = encrypt(list(message), list(key))
 original = decrypt(list(cipher), list(key))
