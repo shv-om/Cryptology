@@ -1,5 +1,11 @@
 # Vernam / One time pad Cipher
+
+# Problem with character mapping and while converting string to int preceeding 0s disappear.
+
+
 print("\n*** One time pad/Vernam Cipher ***")
+
+import random
 
 def vernamencrypt(org, key):
 	cipstream = []
@@ -36,6 +42,7 @@ def vernamdecrypt(cip, key):
 		kstream = bin(ord(key[i])).lstrip('0b')
 
 		for j in range(len(ostream)):
+			#print(int(ostream[j]), int(kstream[j]))
 			msgstream.append(str(int(ostream[j]) ^ int(kstream[j])))
 
 		while msgstream != []:
@@ -48,7 +55,7 @@ def vernamdecrypt(cip, key):
 
 print("* Message and Keys should be of equal length")
 org1 = input("Enter a text: ")
-key = input("Enter b: ")
+key = input("Enter a key (random): ")
 
 cip1 = vernamencrypt(org1, key)
 msg1 = vernamdecrypt(cip1, key)

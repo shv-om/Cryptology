@@ -16,7 +16,7 @@ def shiftdecrypt(cip, key):
 	
 	return ''.join(msg)
 
-org1 = 'msc'
+org1 = input("Enter your text: ")
 cip1 = shiftencrypt(org1, 4)
 msg1 = shiftdecrypt(cip1, 4)
 
@@ -47,8 +47,8 @@ def vigdecrypt(cip, key):
 	return ''.join(msg)
 
 
-org2 = 'msga'
-key = 'ad'
+org2 = input("Enter the text: ")
+key = input("Enter the key: ")
 cip2 = vigencrypt(org2, key)
 msg2 = vigdecrypt(cip2, key)
 
